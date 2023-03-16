@@ -29,6 +29,17 @@ Object.freeze(arr);
 
 
 **Tipe Data**
+> untuk mengecek tipe data variabel menggunakan **typeof**
+```javascript
+let name = "budi";
+let age = 20;
+let maried = false;
+
+// typeof [varibel]
+console.log( typeof name );      // String
+console.log( typeof age );       // Number
+console.log( typeof maried );    // boolean
+```
 |Tipe Data|Deskripsi|
 |----|----|
 |Number| tipe data angka integer ( bilangan bulat ) dan float( bilangan pecahan )|
@@ -59,4 +70,30 @@ console.log( c );
 let d = parseFloat("12.4566");
 console.log( d );
 ```
-**Sistem Bilangan** 
+**Sistem Bilangan**
+|type number|description|basis|range|
+|:----:|----|----|----|
+|0b|bilangan biner|2| 0 dan 1 |
+|0o|bilangan octal|8| 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 |
+|0x|bilangan hexadesimal|16| 0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , A , B , C , D , E , F |
+
+
+```javascript
+let biner = 0b11111111;
+let octal = 0o17;
+let hexadesimal = 0x14;
+
+console.log( biner );         // 255
+console.log( octal );         // 15
+console.log( hexadesimal );   // 20
+
+// parse( [variabel/value] , [basis] );
+let a = parseInt( 11111111 , 2 );
+let b = parseInt( 17 , 8 );
+let c = parseInt( 14 , 16 );
+
+console.log( a );         // 255
+console.log( b );         // 15
+console.log( c );         // 20
+```
+
