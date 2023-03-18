@@ -80,3 +80,39 @@ console.log( "name" in obj );     // true
 console.log( "age" in obj );      // true
 console.log( "gender" in obj );   // false
 ```
+
+> **Operator Ternary** adalah operator yang akan menghasilkan value pertama jika kondisi true.
+```javascript
+// [condtion] ? [value-1] : [value-2]
+
+let nilai = 79;
+let hasil = nilai >= 75 ? "LULUS" : "TIDAK LULUS";
+console.log(hasil);        // "LULUS"
+
+let umur = 18;
+let category = umur > 80 ? "LANSIA" : umur > 25 ? "DEWASA" : umur > 12 ? "REMAJA" : "ANAK-ANAK";
+console.log(category)      // "REMAJA"
+```
+
+> **Operator Nullish** adalah operator yang akan menghasilkan value default jika variabel bernilai null atau undifined.
+```javascript
+// [variabel] ? [value-default]
+
+let a = null;
+let result = a ?? "hello world";
+console.log( result )     // "hello world"
+```
+
+> **Operator chaining** adalah operator yang digunakan untuk mengecek ada tidaknya property pada object secara aman.
+```javascript
+// [object]?.[property]?.[property]?. ... .[property]
+
+let person = {
+    "name"  : "budi",
+    "age"   : 20
+}
+
+
+console.log( person.history.education );      // error
+console.log( person?.history?.education );    // undifined
+``` 
